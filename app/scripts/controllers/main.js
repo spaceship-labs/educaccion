@@ -21,7 +21,6 @@ angular.module('caminoAlExitoApp')
         $scope.story.cct = null;
       }
     };
-
     $scope.getSchools = function(name) {
       return $http({
         method: 'GET',
