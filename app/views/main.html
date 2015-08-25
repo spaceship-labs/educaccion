@@ -1,0 +1,39 @@
+<md-card layout-padding layout-wrap layout='row'>
+  <md-autocomplete flex='50' required
+      md-input-name="autocompleteField"
+      md-input-minlength="2"
+      md-search-text="searchText"
+      md-items="item in getSchools(searchText)"
+      md-selected-item='selectedSchool'
+      md-selected-item-change='selectSchool()'
+      md-item-text="item.nombre+', '+item.nom_municipio"
+      md-floating-label="Escuela"
+      ng-model='story.school'
+      ng-disabled='saved'
+      >
+    <md-item-template>
+      <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>
+    </md-item-template>
+  </md-autocomplete>
+  <md-input-container flex='50'>
+    <label>CCT</label>
+    <input required ng-model="story.cct" ng-disabled='saved'>
+  </md-input-container>
+  <md-input-container flex='50'>
+    <label>Email</label>
+    <input type='email' required ng-model="story.email" ng-disabled='saved'>
+  </md-input-container>
+  <md-input-container flex='50'>
+    <label>Teléfono</label>
+    <input required ng-model="story.phone" ng-disabled='saved'>
+  </md-input-container>
+  <md-input-container flex='50'>
+    <label>Cuentanos tu historia</label>
+    <textarea required ng-model="story.content" rows="4" ng-disabled='saved'></textarea>
+  </md-input-container>
+  <md-input-container flex='50'>
+    <label>Nombres de los padres de familia</label>
+    <textarea required ng-model="story.parents" rows="4" ng-disabled='saved' ></textarea>
+  </md-input-container>
+  <md-button ng-if='!saved' class="md-raised md-primary" ng-click='save()'>Enviar</md-button>
+</md-card>
