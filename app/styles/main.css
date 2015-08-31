@@ -9,6 +9,9 @@ body {
   padding: 0;
 }
 
+.clear{clear:both;}
+.container{max-width: 900px;margin: 0 auto}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -81,3 +84,41 @@ body {
     border-bottom: 0;
   }
 }
+
+/*header*/
+#header{background: #fff}
+#header .menu{background-color:white;height:90px;z-index: 2;position: relative;}
+#header .menu #button-menu-mobile{background: #08863D;cursor: pointer;display: none;position: absolute;height: 35px;padding: 5px 0;left: 15px;top: 15px;width: 35px;z-index: 1}
+#header .menu #button-menu-mobile hr{background: #fff; border-radius: 3px;margin: 3px 5px; height: 4px; }
+#header .menu .container{height: 100%;position:relative;}
+#header .menu .container .row-links{height: 100%}
+#header .menu a.principal{display:block;text-align:center;color:#17B9F3;font-size:16px;height: 100%;padding:15px 6px;line-height:17px;font-size:17px;position:relative;z-index: 1;
+	-webkit-transition: color .2s;
+	-moz-transition: color .2s;
+	-o-transition: color .2s;
+	-ms-transition: color .2s;
+	transition: color .2s;
+}
+#header .menu a.principal:before{content:"";position:absolute;width:1px;display:block;height:100%;background:#F2F2F2;top:0;left:0;}
+#header .menu a.principal:first-child{border:none;}
+#header .menu a.principal:hover{color:white;}
+#header .menu a.principal i{display:block;font-size: 32px;margin-bottom: 8px}
+#header .menu a.principal i.icon-compara-01{margin-left: -50px; font-size: 22px; margin-bottom: 11px; margin-top: 7px;}
+#header .menu a + a + a{margin-left:1px;}
+#header .menu a.principal:hover{color:white;}/*background-color:#00ADF3;*/
+#header .menu a.principal:after{content:'';width:100%;position:absolute;top:0;left:0;height:0;background:#00ADF3;z-index:-1;
+-webkit-transition: height .2s;
+-moz-transition: height .2s;
+-o-transition: height .2s;
+-ms-transition: height .2s;
+transition: height .2s;
+}
+#header .menu a.principal:hover:after{height:100%}
+#header .menu a.logo{width:auto;margin:10px 4px 0 6px;padding:0;background-color:transparent;}
+#header .menu a.logo:before{background-color:transparent;}
+#header .menu a.logo:hover{background-color:transparent;}
+#header .menu a.logo img{max-width: 90%}
+#header .menu a[href$='/compara/']{margin-left:-4px;}
+#header .menu .social-icons{padding-top: 30px}
+#header .menu .social-icons i{color: #17B9F3;font-size: 30px;}
+

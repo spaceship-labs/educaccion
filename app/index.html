@@ -21,7 +21,16 @@
 </head>
 
 <body ng-app="caminoAlExitoApp">
-  <div ng-view></div>
+  <div id="wrap">
+    <div id="main" class="clearfix">
+        <div id="topBackRepeat" flex layout-fill>
+          <ng-include src="'views/header.html'"></ng-include>
+          <div ng-view></div>
+        </div><!-- END topBackRepeat -->
+      </div><!-- END main -->
+    </div><!-- END wrap -->
+    <div class="clear"></div>
+
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
   ! function(A, n, g, u, l, a, r) {
@@ -51,6 +60,7 @@
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/header.js"></script>
   <!-- endbuild -->
 </body>
 
