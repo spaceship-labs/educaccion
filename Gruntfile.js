@@ -415,7 +415,8 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>'
         }]
       }
-    }
+    },
+
   });
 
 
@@ -458,7 +459,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    //'cdnify',
     'cssmin',
     'uglify',
     'filerev',
@@ -472,4 +473,5 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
 };
