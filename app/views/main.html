@@ -1,11 +1,12 @@
 <div id="camino" layout="column" >
-  <div layout="row" layout-fill>
-    <div class="intro left" flex="45">
+  <div layout="row" layout-fill layout-md="column">
+    <div class="intro left" flex="45" flex-sm="100" flex-md="100">
       <div layout="column" layout-align="center center" layout-fill layout-padding>
         <img src="" alt="" class="tmp">
         <p class="question">¿Tienes una historia de éxito?</p>
         <p class="cuenta">¡Cuéntanosla!</p>
         <p class="share">¡La queremos compartir!</p>
+        <div class="mbases" hide-md></div>
         <div class="bases" layout="column" layout-align="space-around center">
           <p>Leer bases de la convocatoria aquí:</p>
           <div layout="row" class="border-link" layout-align="center center">
@@ -18,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="intro right" flex>
+    <div class="intro right" flex hide-sm>
       <img src="images/nino.jpg" alt="">
     </div>
   </div>
@@ -28,12 +29,13 @@
       <h1>Registra tu historia</h1>
       <p>Fecha limite de parte 1:</p>
       <p><strong>31 de Diciembre del 2015</strong></p>
-      <a class="down"></a>
+      <a class="down" ng-click="toDown()"></a>
     </div>
   </div>
 </div>
 
 <div class="container inputs">
+  <a id="registro"></a>
   <md-card layout-padding layout-wrap layout='row' ng-if='!saved &amp;&amp; !saving'>
     <div layout="column" layout-fill flex="50" layout-wrap>
       <div layout="row" layout-align="start center" class="input-header">

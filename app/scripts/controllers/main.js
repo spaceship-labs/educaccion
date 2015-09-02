@@ -9,7 +9,7 @@
  * Controller of the caminoAlExitoApp
  */
 angular.module('caminoAlExitoApp')
-  .controller('MainCtrl', function($scope, $firebaseArray, $http, $mdDialog) {
+  .controller('MainCtrl', function($scope, $firebaseArray, $http, $mdDialog, $location, $anchorScroll) {
     var firebaseEntries = new Firebase('https://caminoalexito.firebaseio.com/').child('entries'); //
     /*$scope.stories = $firebaseArray(ref);
 
@@ -74,6 +74,11 @@ angular.module('caminoAlExitoApp')
         $scope.saved = !e ? true : false;
         $scope.$apply();
       });
+    };
+
+    $scope.toDown = function(){
+      $location.hash('registro');
+      $anchorScroll();
     };
 
   });

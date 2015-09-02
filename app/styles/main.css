@@ -178,7 +178,7 @@ transition: height .2s;
 #camino .left .question{font-size:18px; font-weight:700;}
 #camino .left .share{font-size:23px; font-weight:700;}
 #camino .left .cuenta{font-size:45px;}
-#camino .bases{margin-top:44px;}
+#camino .mbases{margin-top:44px;}
 #camino .bases p{font-size:18px;}
 #camino .bases .border-link{margin:16px; position:relative;border: 2px solid white; font-weight: 700; padding:2px 23px;}
 #camino .bases .border-link span{font-size:25px;}
@@ -188,7 +188,7 @@ transition: height .2s;
 #camino .info h1{font-size:25px; line-height:normal; font-weight:700; color:white;}
 #camino .info p{font-size:16px; padding:13px 0 0; color:white;}
 #camino .info p + p{padding:0; margin-top:-5px; font-size:16px; font-weight: 700; color:white;}
-#camino .down{background:url(../images/flecha.png) center no-repeat; display:block; width:32px; height:43px; margin-bottom:15px;background-size:43px 21px;}
+#camino .down{background:url(../images/flecha.png) center no-repeat; display:block; width:32px; height:43px; margin-bottom:15px;background-size:43px 21px; cursor:pointer;}
 
 #content{background:#F4F4F4;}
 
