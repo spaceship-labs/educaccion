@@ -10,7 +10,9 @@ body {
 }
 
 .clear{clear:both;}
-.container{max-width: 900px;margin: 0 auto}
+.container{max-width: 1000px;margin: 0 auto}
+a{text-decoration:none;}
+strong{font-weight:700;}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -65,7 +67,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    /*max-width: 730px;*/
   }
 
   /* Remove the padding we set earlier */
@@ -118,7 +120,79 @@ transition: height .2s;
 #header .menu a.logo:before{background-color:transparent;}
 #header .menu a.logo:hover{background-color:transparent;}
 #header .menu a.logo img{max-width: 90%}
+#header md-sidenav ul{overflow:hidden;}
 #header .menu a[href$='/compara/']{margin-left:-4px;}
 #header .menu .social-icons{padding-top: 30px}
 #header .menu .social-icons i{color: #17B9F3;font-size: 30px;}
+#header1{width: 100%; max-width:1000px;}
 
+#sidebar-menu{position: fixed;}
+#sidebar-menu md-toolbar.md-default-theme{background: #08863D!important}
+#sidebar-menu md-content.md-default-theme{padding: 0}
+#sidebar-menu ul li button{text-align: left;width: 100%}
+#sidebar-menu ul li a{color: #08863D;font-size: 18px}
+#sidebar-menu #close-button{color: #fff;margin-left: 10px; background:#08863D;}
+
+@media (max-width: 600px){
+	/*General*/
+	[flex-sm="100"]{max-width: none!important;-webkit-flex: 1!important; -ms-flex: 1!important; flex: 1!important;}
+
+	/*Header*/
+	#header .menu #button-menu-mobile{display: block;}
+	#header a[hide-sm]{display: none!important;}
+	#header #sub-header{text-align: center;}
+	#header #sub-header .column-left{display: none;}
+	#header #sub-header .column-right{padding: 10px}
+	#header #sub-header .column-right .titles h1{padding: 4px;margin-top: 0}
+	#simple_search input[type="text"],
+	#simple_search .button-bordered{margin: 0 auto 10px;max-width: 240px;width: 240px}
+	#header .menu a.logo{margin: 0 auto!important;max-width: 50%!important;text-align: center;}
+	#header .menu a.logo img{max-width: 100%;margin-top: 10px}
+
+	/*Breadcrumb*/
+	#content .container .breadcrumb a + a:before{content: '> ';border: 0}
+	#content .container .breadcrumb a.start{color: #05A6EE;background: none}
+	#content .container .breadcrumb a.start:after{display: none;}
+	#content .container .breadcrumb a{border: 0}
+	#content .container .breadcrumb a + a:before{left: 0}
+	#content .container .breadcrumb :nth-child(2){/*padding-left: 0;*/border-left: none}
+
+
+	/*Blog*/
+	#content .container.blog .feed .post .post-thumb{height: 200px;}
+	#content .container.blog .feed .post .post-thumb .img{padding: 18%;}
+
+
+	ul.dropdown-menu{max-width: 240px}
+	#toggle-compara{display: none;}
+
+}
+
+#camino img{width:100%; height:100%;}
+#camino .intro{background:#5BA1E6; max-height:555px;}
+#camino .left, #camino .left a{color:white;}
+#camino .right{overflow:hidden;}
+#camino .register.info{background:#F6921A;}
+#camino .tmp{margin-top:240px;}
+#camino .left p{line-height:normal}
+#camino .left .question{font-size:18px; font-weight:700;}
+#camino .left .share{font-size:23px; font-weight:700;}
+#camino .left .cuenta{font-size:45px;}
+#camino .bases{margin-top:44px;}
+#camino .bases p{font-size:18px;}
+#camino .bases .border-link{margin:16px; position:relative;border: 2px solid white; font-weight: 700; padding:2px 23px;}
+#camino .bases .border-link span{font-size:25px;}
+#camino .bases .border-link p{font-size:15px; padding:10px 10px; font-weight:700;}
+#camino .bases .border-link .total-link{position:absolute; width:100%; height:100%; right:0; top:0;}
+#camino .info .iconexito-registro{font-size:60px; color:white; padding:30px 0 0;}
+#camino .info h1{font-size:25px; line-height:normal; font-weight:700; color:white;}
+#camino .info p{font-size:16px; padding:13px 0 0; color:white;}
+#camino .info p + p{padding:0; margin-top:-5px; font-size:16px; font-weight: 700; color:white;}
+#camino .down{background:url(../images/flecha.png) center no-repeat; display:block; width:32px; height:43px; margin-bottom:15px;background-size:43px 21px;}
+
+#content{background:#F4F4F4;}
+
+.inputs > md-card{padding:40px 40px}
+.inputs .circle{border-radius:50%; border:2px solid #F6921D; width:51px; height:51px; text-align:center; position:relative;}
+.inputs [class^="iconexito-"],.inputs [class*=" iconexito-"]{line-height:45px; font-size:31px; color:#F6921D}
+.inputs .input-header p{font-size:19px; margin-left:12px; color:#5BA1E6;}

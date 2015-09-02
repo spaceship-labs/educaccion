@@ -9,6 +9,11 @@
   <!-- /process -->
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/stickyFooter.css">
+  <link rel="stylesheet" href="fonts/fontello.css">
+  <link rel="stylesheet" href="fonts/fontello-ie7.css">
+  <link rel="stylesheet" href="fonts/font_exito/style.css">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
@@ -23,9 +28,9 @@
 <body ng-app="caminoAlExitoApp">
   <div id="wrap">
     <div id="main" class="clearfix">
-        <div id="topBackRepeat" flex layout-fill>
+        <div id="topBackRepeat">
           <ng-include src="'views/header.html'"></ng-include>
-          <div ng-view></div>
+          <div id="content" ng-view></div>
         </div><!-- END topBackRepeat -->
       </div><!-- END main -->
     </div><!-- END wrap -->

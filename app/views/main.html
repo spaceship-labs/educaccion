@@ -1,50 +1,147 @@
-<md-card layout-padding layout-wrap layout='row' ng-if='!saved &amp;&amp; !saving'>
-  <md-autocomplete flex='50' required
-      md-input-name="autocompleteField"
-      md-input-minlength="2"
-      md-search-text="searchText"
-      md-items="item in getSchools(searchText)"
-      md-selected-item='selectedSchool'
-      md-selected-item-change='selectSchool(selectedSchool)'
-      md-item-text="item.nombre+', '+item.nom_municipio"
-      md-floating-label="Escuela"
-      ng-model='story.school'
-      >
-    <md-item-template>
-      <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>
-    </md-item-template>
-  </md-autocomplete>
-  <md-input-container flex='50'>
-    <label>CCT</label>
-    <input required ng-model="story.cct" >
-  </md-input-container>
-  <md-input-container flex='50'>
-    <label>Email</label>
-    <input type='email' required ng-model="story.email">
-  </md-input-container>
-  <md-input-container flex='50'>
-    <label>Teléfono</label>
-    <input required ng-model="story.phone">
-  </md-input-container>
-  <md-input-container flex='50'>
-    <label>Cuentanos tu historia</label>
-    <textarea required ng-model="story.content" rows="4"></textarea>
-  </md-input-container>
-  <md-input-container flex='50'>
-    <label>Nombres de los padres de familia</label>
-    <textarea required ng-model="story.parents" rows="4" ></textarea>
-  </md-input-container>
-  <md-input-container flex='50' >
-    <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" ></div>
-    <p>{{file.name}}</p>
-    <p>tamaño:{{file.size | fileSize}}</p>
-  </md-input-container>
-  <md-button ng-if='!saved' class="md-raised md-primary" ng-click='save()'>Enviar</md-button>
-</md-card>
-<div layout-fill layout='column' layout-align='center center' flex ng-if='saving' style='height:100%'>
-  <md-progress-linear md-mode="indeterminate"></md-progress-linear>
-  <p>Guardando....</p>
+<div id="camino" layout="column" >
+  <div layout="row" layout-fill>
+    <div class="intro left" flex="45">
+      <div layout="column" layout-align="center center" layout-fill layout-padding>
+        <img src="" alt="" class="tmp">
+        <p class="question">¿Tienes una historia de éxito?</p>
+        <p class="cuenta">¡Cuéntanosla!</p>
+        <p class="share">¡La queremos compartir!</p>
+        <div class="bases" layout="column" layout-align="space-around center">
+          <p>Leer bases de la convocatoria aquí:</p>
+          <div layout="row" class="border-link" layout-align="center center">
+            <span class="iconexito-pdf">
+            </span>
+            <p>Convocatoria</p>
+            <a class="total-link" href="/algo">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro right" flex>
+      <img src="/images/nino.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="register info">
+    <div layout="column" layout-align="center center">
+      <span class="iconexito-registro"></span>
+      <h1>Registra tu historia</h1>
+      <p>Fecha limite de parte 1:</p>
+      <p><strong>31 de Diciembre del 2015</strong></p>
+      <a class="down"></a>
+    </div>
+  </div>
+
 </div>
-<md-card layout-padding ng-if='saved' layout-fill flex>
-  <h3>Gracias por tu entrada</h3>
-</md-card>
+
+<div class="container inputs">
+  <md-card layout-padding layout-wrap layout='row' ng-if='!saved &amp;&amp; !saving'>
+    <div layout="column" layout-fill flex="50" layout-wrap>
+      <div layout="row" layout-align="start center" class="input-header">
+        <span class="circle">
+          <span class="iconexito-escuela"></span>
+        </span>
+        <p>Escuela</p>
+      </div>
+      <md-autocomplete required
+          md-input-name="autocompleteField"
+          md-input-minlength="2"
+          md-search-text="searchText"
+          md-items="item in getSchools(searchText)"
+          md-selected-item='selectedSchool'
+          md-selected-item-change='selectSchool(selectedSchool)'
+          md-item-text="item.nombre+', '+item.nom_municipio"
+          md-floating-label="Nombre de la escuela"
+          ng-model='story.school'
+          >
+        <md-item-template>
+          <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>
+        </md-item-template>
+      </md-autocomplete>
+    </div>
+    <div layout="column" layout-fill flex="50">
+      <div layout="row" layout-align="start center" class="input-header">
+        <span class="circle">
+          <span class="iconexito-escuela"></span>
+        </span>
+        <p>CCT</p>
+      </div>
+      <md-input-container>
+        <label>Clave del Centro de Trabajo</label>
+        <input required ng-model="story.cct" >
+      </md-input-container>
+    </div>
+    <div layout="column" layout-fill flex="100">
+      <div layout="row" layout-align="start center" class="input-header">
+        <span class="circle">
+          <span class="iconexito-nombre"></span>
+        </span>
+        <p>Nombre y datos de contacto del representante de madres y padres de familia designado para esta convocatoria</p>
+      </div>
+      <md-input-container>
+        <label>Nombre</label>
+        <input type='text' required ng-model="story.names">
+      </md-input-container>
+    </div>
+    <div layout="column" layout-fill flex="50">
+      <div layout="row" layout-align="start center" class="input-header">
+        <span class="circle">
+          <span class="iconexito-mail"></span>
+        </span>
+        <p>Mail</p>
+      </div>
+      <md-input-container>
+        <label>Escribe tu mail</label>
+        <input type='email' required ng-model="story.email">
+      </md-input-container>
+    </div>
+    <div layout="column" layout-fill flex="50">
+      <div layout="row" layout-align="start center" class="input-header">
+        <span class="circle">
+          <span class="iconexito-tel"></span>
+        </span>
+        <p>Teléfono</p>
+      </div>
+      <md-input-container flex='50'>
+        <label>Teléfono</label>
+        <input required ng-model="story.phone">
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-fill flex="100">
+      <div layout="row" layout-align="start center" class="input-header">
+        <span class="circle">
+          <span class="iconexito-integrantes"></span>
+        </span>
+        <p>Nombre de los integrantes de asociación de padres de familia o consejo de participacion social (o de ambos)</p>
+      </div>
+      <md-input-container>
+        <label>Nombre</label>
+        <input type='text' required ng-model="story.names">
+      </md-input-container>
+    </div>
+    <md-input-container flex='50'>
+      <label>Cuentanos tu historia</label>
+      <textarea required ng-model="story.content" rows="4"></textarea>
+    </md-input-container>
+    <md-input-container flex='50'>
+      <label>Nombres de los padres de familia</label>
+      <textarea required ng-model="story.parents" rows="4" ></textarea>
+    </md-input-container>
+    <md-input-container flex='50' >
+      <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" ></div>
+      <p>{{file.name}}</p>
+      <p>tamaño:{{file.size | fileSize}}</p>
+    </md-input-container>
+    <md-button ng-if='!saved' class="md-raised md-primary" ng-click='save()'>Enviar</md-button>
+  </md-card>
+  <div layout-fill layout='column' layout-align='center center' flex ng-if='saving' style='height:100%'>
+    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+    <p>Guardando....</p>
+  </div>
+  <md-card layout-padding ng-if='saved' layout-fill flex>
+    <h3>Gracias por tu entrada</h3>
+  </md-card>
+</div>

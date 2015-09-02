@@ -9,9 +9,8 @@
  */
 angular.module('caminoAlExitoApp')
   .controller('HeaderCtrl', function ($scope, $mdSidenav) {
-    console.log('md', $mdSidenav);
     $scope.toggleLeft = function() {
-      $mdsidenav('left').toggle();
+      $mdSidenav('left').toggle();
     };
 
     $scope.close = function() {
