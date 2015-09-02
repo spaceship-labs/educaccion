@@ -18,12 +18,10 @@
         </div>
       </div>
     </div>
-
     <div class="intro right" flex>
       <img src="images/nino.jpg" alt="">
     </div>
   </div>
-
   <div class="register info">
     <div layout="column" layout-align="center center">
       <span class="iconexito-registro"></span>
@@ -33,7 +31,6 @@
       <a class="down"></a>
     </div>
   </div>
-
 </div>
 
 <div class="container inputs">
@@ -109,39 +106,102 @@
         <input required ng-model="story.phone">
       </md-input-container>
     </div>
-
     <div layout="column" layout-fill flex="100">
       <div layout="row" layout-align="start center" class="input-header">
         <span class="circle">
           <span class="iconexito-integrantes"></span>
         </span>
-        <p>Nombre de los integrantes de asociación de padres de familia o consejo de participacion social (o de ambos)</p>
+        <p>Nombre de los integrantes de asociación de padres de familia o consejo de participación social (o de ambos)</p>
       </div>
       <md-input-container>
         <label>Nombre</label>
         <input type='text' required ng-model="story.names">
       </md-input-container>
     </div>
-    <md-input-container flex='50'>
-      <label>Cuentanos tu historia</label>
-      <textarea required ng-model="story.content" rows="4"></textarea>
-    </md-input-container>
-    <md-input-container flex='50'>
-      <label>Nombres de los padres de familia</label>
-      <textarea required ng-model="story.parents" rows="4" ></textarea>
-    </md-input-container>
-    <md-input-container flex='50' >
-      <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" ></div>
-      <p>{{file.name}}</p>
-      <p>tamaño:{{file.size | fileSize}}</p>
-    </md-input-container>
-    <md-button ng-if='!saved' class="md-raised md-primary" ng-click='save()'>Enviar</md-button>
+    <div layout="column" layout-fill flex="100" class="expand-header">
+      <div layout="row" layout-align="start center" class="input-header">
+        <span class="circle">
+          <span class="iconexito-antecedentes"></span>
+        </span>
+        <p>Antecedentes</p>
+      </div>
+      <p class="info">
+        <strong>Explicación de la problemática que se busca resolver</strong>
+        (¿Por qué es un problema actual? ¿Qué lo origina?)
+        <strong>y una breve justificación de por qué se considera importante por la comunidad educativa</strong>
+        (¿Por qué, si lo resolvemos, se va a reflejar en mejores condiciones para el aprendizaje de nuestros hijos?)
+      </p>
+      <md-input-container>
+        <label>Cuentanos tu historia</label>
+        <textarea required ng-model="story.content" rows="4"></textarea>
+      </md-input-container>
+    </div>
+    <div layout="column" layout-fill flex="100" class="expand-header">
+      <div layout="row" layout-align="start center" class="input-header">
+        <span class="circle">
+          <span class="iconexito-antecedentes"></span>
+        </span>
+        <p>Objetivos del proyecto</p>
+      </div>
+      <ul class="info">
+        <li><strong>Descripcion de las actividades que se planean realizar</strong>(¿Qué vamos a hacer?)</li>
+        <li><strong>Lista de quiénes estaría involucrados </strong>(¿Quiénes participarán en lo que vamos a hacer?)</li>
+        <li><strong>Fechas estimadas para la realización del proyecto</strong>(¿Con qué etapas y en que fechas vamos a realizar el proyecto de mejora?).</li>
+      </ul>
+      <md-input-container>
+        <label>Nombres de los padres de familia</label>
+        <textarea required ng-model="story.parents" rows="4" ></textarea>
+      </md-input-container>
+    </div>
+    <div layout="column" layout-fill flex="100" class="expand-header">
+      <div layout="row" layout-align="start center" class="input-header">
+        <span class="circle">
+          <span class="iconexito-antecedentes"></span>
+        </span>
+        <p>Organización</p>
+      </div>
+      <p class="info">
+        <strong>Breve descripción de cómo se tomarán las decisiones</strong>
+        (¿Cómo vamos a ponernos de acuerdo? ¿Qué haremos si surge un imprevisto? ¿Cómo vamos a verificar si avanzamos como lo planeamos?)
+        <strong>Y cómo interactuarán con los maestros y directivos de la escuela</strong>
+        (¿Cómo los vamos a informar? ¿Qué colaboración les vamos a pedir? ¿Cómo sabemos que están de acuerdo con lo que vamos haciendo y lo apoyan?).
+      </p>
+      <md-input-container>
+        <label>Organización</label>
+        <textarea required ng-model="story.org" rows="4" ></textarea>
+      </md-input-container>
+    </div>
+    <div layout="column" layout-fill flex="100" class="expand-header">
+      <div layout="row" layout-align="start center" class="input-header signature">
+        <span class="circle">
+          <span class="iconexito-antecedentes"></span>
+        </span>
+        <p>Firmas</p>
+      </div>
+      <p class="info">
+        <strong>Anexe una hoja escaneada con los nombres y firmas de los integrantes de la sociedad de padres, como aval de que la participación en este proyecto es aprobada por todos los padres de familia</strong>
+      </p>
+      <md-input-container>
+        <p class="warning">Sube el archivo desde tu computadora. El maximo es de 10MB</p>
+        <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" ></div>
+        <p>{{file.name}}</p>
+        <p>tamaño:{{file.size | fileSize}}</p>
+      </md-input-container>
+    </div>
+    <div layout-align="center center" layout="column" flex="100" class="send">
+      <md-button ng-if='!saved' class="md-raised md-primary" ng-click='save()'>Enviar registro</md-button>
+      <span ng-if='saved' class="iconexito-listo"></span>
+      <p ng-if='saved' class="success">¡Listo!</p>
+      <p ng-if='saved'>Tu registro ya se envió</p>
+    </div>
   </md-card>
   <div layout-fill layout='column' layout-align='center center' flex ng-if='saving' style='height:100%'>
     <md-progress-linear md-mode="indeterminate"></md-progress-linear>
     <p>Guardando....</p>
   </div>
+  <!--
   <md-card layout-padding ng-if='saved' layout-fill flex>
     <h3>Gracias por tu entrada</h3>
   </md-card>
+  -->
 </div>
