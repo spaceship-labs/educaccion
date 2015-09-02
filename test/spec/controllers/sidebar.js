@@ -1,23 +1,23 @@
 'use strict';
 
-describe('Controller: HeaderCtrl', function () {
+describe('Controller: SidebarCtrl', function () {
 
   // load the controller's module
   beforeEach(module('caminoAlExitoApp'));
 
-  var HeaderCtrl,
+  var SidebarCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    HeaderCtrl = $controller('HeaderCtrl', {
+    SidebarCtrl = $controller('SidebarCtrl', {
       $scope: scope
       // place here mocked dependencies
     });
   }));
 
-  it('should toggleLeft defined', function () {
-    expect(scope.toggleLeft).to.be.a('function');
+  it('should close defined', function () {
+    expect(scope.close).to.be.a('function');
   });
 });

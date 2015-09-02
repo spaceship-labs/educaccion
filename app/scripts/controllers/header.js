@@ -12,9 +12,4 @@ angular.module('caminoAlExitoApp')
     $scope.toggleLeft = function() {
       $mdSidenav('left').toggle();
     };
-
-    $scope.close = function() {
-      $mdSidenav('left').close();
-    };
-
   });
