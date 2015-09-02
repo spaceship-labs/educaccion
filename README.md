@@ -1,3 +1,6 @@
+[![Code Climate](https://codeclimate.com/github/spaceship-labs/camino-al-exito/badges/gpa.svg)](https://codeclimate.com/github/spaceship-labs/camino-al-exito)
+[![Test Coverage](https://codeclimate.com/github/spaceship-labs/camino-al-exito/badges/coverage.svg)](https://codeclimate.com/github/spaceship-labs/camino-al-exito/coverage)
+
 # camino-al-exito
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
