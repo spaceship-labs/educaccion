@@ -10,9 +10,15 @@
  */
 angular.module('caminoAlExitoApp')
   .controller('MainCtrl', function($scope, $firebaseArray, $http, $mdDialog) {
-    var ref = new Firebase('https://caminoalexito.firebaseio.com/'); //
-    $scope.stories = $firebaseArray(ref);
+    var firebaseEntries = new Firebase('https://caminoalexito.firebaseio.com/').child('entries'); //
+    /*$scope.stories = $firebaseArray(ref);
+
+    $scope.stories.$loaded(function(data){
+      console.log(data);
+    });
+*/
     $scope.story = {};
+
     $scope.saved = false;
     $scope.saving = false;
     $scope.readMethod = "readAsDataURL";
@@ -63,10 +69,10 @@ angular.module('caminoAlExitoApp')
 
     $scope.save = function() {
       $scope.saving = true;
-      $scope.stories.$add($scope.story).then(function(ref) {
-        console.log(ref);
+      firebaseEntries.push().set($scope.story, function(e) {
         $scope.saving = false;
-        $scope.saved = true;
+        $scope.saved = !e ? true : false;
+        $scope.$apply();
       });
     };
 
