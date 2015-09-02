@@ -178,7 +178,7 @@ transition: height .2s;
 #camino .left .question{font-size:18px; font-weight:700;}
 #camino .left .share{font-size:23px; font-weight:700;}
 #camino .left .cuenta{font-size:45px;}
-#camino .bases{margin-top:44px;}
+#camino .mbases{margin-top:44px;}
 #camino .bases p{font-size:18px;}
 #camino .bases .border-link{margin:16px; position:relative;border: 2px solid white; font-weight: 700; padding:2px 23px;}
 #camino .bases .border-link span{font-size:25px;}
@@ -188,12 +188,12 @@ transition: height .2s;
 #camino .info h1{font-size:25px; line-height:normal; font-weight:700; color:white;}
 #camino .info p{font-size:16px; padding:13px 0 0; color:white;}
 #camino .info p + p{padding:0; margin-top:-5px; font-size:16px; font-weight: 700; color:white;}
-#camino .down{background:url(../images/flecha.png) center no-repeat; display:block; width:32px; height:43px; margin-bottom:15px;background-size:43px 21px;}
+#camino .down{background:url(../images/flecha.png) center no-repeat; display:block; width:32px; height:43px; margin-bottom:15px;background-size:43px 21px; cursor:pointer;}
 
 #content{background:#F4F4F4;}
 
 .inputs{padding:41px 0 0 0;}
-.inputs > md-card{padding:40px 40px}
+.inputs > md-card{padding:40px 40px;}
 .inputs .circle{border-radius:50%; border:2px solid #F6921D; width:51px; height:51px; text-align:center; position:relative;}
 .inputs [class^="iconexito-"],.inputs [class*=" iconexito-"]{line-height:45px; font-size:31px; color:#F6921D}
 .inputs .input-header p{font-size:19px; margin-left:12px; color:#5BA1E6;}
@@ -210,5 +210,16 @@ transition: height .2s;
 .inputs .send p{color:#F6921D;}
 .inputs .send .success{font-size:18px; font-weight:700; line-height:normal; padding:6px 0 0}
 .inputs .send .success + p{font-size:17px;}
+.logos{padding:37px 0;}
 
-
+#footer{background: #20B45E;color: #fff;padding: 10px 0;text-align: center;min-height: 63px;height: auto}
+#footer a{color: #fff}
+#footer .menu a{font-weight: 700;font-size: 14px;/*text-transform: uppercase;*/}
+#footer.bottom-e404{background: #009FE1;padding: 12px 0}
+#footer.bottom-e404 .container.e404 .link{color: #fff;font-size: 18px;float: left;text-align: center;width: 33%;}
+#footer.bottom-e404 .container.e404 .link a{color: #fff}
+#footer.bottom-e404 .container.e404 .link i{font-size: 28px}
+@media(max-width: 960px){
+	#content{padding: 0 12px}
+	#footer{padding: 10px 12px}
+}
