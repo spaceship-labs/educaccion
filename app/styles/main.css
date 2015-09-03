@@ -249,6 +249,6 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 .autocomple_item{color:#868686}
 .autocomple_item + li.autocomple_item{border-top:1px solid #D1D1D1;}
 .autocomple_item  i{position: absolute; left: 4px; top: 5px; font-size: 32px;}
-.autocomple_item p{line-height: 1.2}
+.autocomple_item p{color:red;}
 .autocomple_item a{color: #868686}
 .autocomple_item.active a{color: #fff}
