@@ -47,7 +47,6 @@
 <div class="container inputs">
   <a id="registro"></a>
   <div ng-if='!saved &amp;&amp; !saving'>
-
     <md-card layout-padding layout-wrap layout='row'>
       <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
         <span class="circle">
@@ -59,20 +58,10 @@
         <div layout="row" layout-align="start center" class="input-header">
           <p>Nombre de tu escuela</p>
         </div>
-        <md-autocomplete required
-            md-input-name="autocompleteField"
-            md-input-minlength="2"
-            md-search-text="searchText"
-            md-items="item in getSchools(searchText)"
-            md-selected-item='selectedSchool'
-            md-selected-item-change='selectSchool(selectedSchool)'
-            md-item-text="item.nombre+', '+item.nom_municipio"
-            md-floating-label="Nombre de la escuela"
-            ng-model='story.school'
-            >
+        <md-autocomplete required md-input-name="autocompleteField" md-input-minlength="2" md-search-text="searchText" md-items="item in getSchools(searchText)" md-selected-item='selectedSchool' md-selected-item-change='selectSchool(selectedSchool)' md-item-text="item.nombre+', '+item.nom_municipio" md-floating-label="Nombre de la escuela" ng-model='story.school'>
           <md-item-template>
             <!-- <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>-->
-            <a tabindex="-1" class="autocomple_item" >
+            <a tabindex="-1" class="autocomple_item">
               <i class="icon-escuela-01"></i>
               <strong>
                 <span>{{item.nombre}}</span> (<span >{{item.nom_nivel || item.nivel}}</span>)
@@ -88,7 +77,7 @@
         </div>
         <md-input-container>
           <label>CCT</label>
-          <input required ng-model="story.cct" >
+          <input required ng-model="story.cct">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -97,7 +86,7 @@
         </div>
         <md-input-container>
           <label>Nombre</label>
-          <input type='text' required ng-model="story.representative-names">
+          <input type='text' required ng-model="story.representativeNames">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="50">
@@ -124,7 +113,7 @@
         </div>
         <md-input-container>
           <label>Nombre</label>
-          <input type='text' required ng-model="story.association-names">
+          <input type='text' required ng-model="story.associationNames">
         </md-input-container>
       </div>
     </md-card>
@@ -135,7 +124,6 @@
         </span>
         <p>Beneficiarios de la escuela</p>
       </div>
-
       <div layout="column" layout-fill flex="100">
         <div layout="column" layout-align="start" class="input-header">
           <p>Características de la escuela</p>
@@ -143,10 +131,9 @@
         </div>
         <md-input-container>
           <label>Características de la escuela</label>
-          <textarea required ng-model="story.school-features" rows="4"></textarea>
+          <textarea required ng-model="story.schoolFeatures" rows="4"></textarea>
         </md-input-container>
       </div>
-
       <div layout="column" layout-fill flex="100">
         <div layout="column" layout-align="start" class="input-header">
           <p>Número de alumnos en la matrícula</p>
@@ -154,10 +141,9 @@
         </div>
         <md-input-container>
           <label>Número de alumnos</label>
-          <input type='text' required ng-model="story.students-number">
+          <input type='text' required ng-model="story.studentsNumber">
         </md-input-container>
       </div>
-
       <div layout="column" layout-fill flex="100">
         <div layout="column" layout-align="start" class="input-header">
           <p>Descripción del entorno familiar y social de la población beneficiada</p>
@@ -165,10 +151,9 @@
         </div>
         <md-input-container>
           <label>Descripción</label>
-          <textarea required ng-model="story.environment-description" rows="4"></textarea>
+          <textarea required ng-model="story.environmentDescription" rows="4"></textarea>
         </md-input-container>
       </div>
-
       <div layout="column" layout-fill flex="100">
         <div layout="column" layout-align="start" class="input-header">
           <p>Principales problemas en el entorno de la escuela</p>
@@ -176,7 +161,7 @@
         </div>
         <md-input-container>
           <label>Principales problemas</label>
-          <textarea required ng-model="story.school-problems" rows="4"></textarea>
+          <textarea required ng-model="story.schoolProblems" rows="4"></textarea>
         </md-input-container>
       </div>
     </md-card>
@@ -217,12 +202,12 @@
       </div>
       <div layout="column" layout-fill flex="100">
         <div layout="column" layout-align="start" class="input-header">
-          <p>Descripción de las actividades que se planean realizar   </p>
+          <p>Descripción de las actividades que se planean realizar </p>
           <p class="description">¿Qué vamos a hacer?</p>
         </div>
         <md-input-container>
           <label>Descripción</label>
-          <textarea required ng-model="story.activity-description" rows="4"></textarea>
+          <textarea required ng-model="story.activityDescription" rows="4"></textarea>
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -232,7 +217,7 @@
         </div>
         <md-input-container>
           <label>Nombres</label>
-          <input type='text' required ng-model="story.names-list">
+          <input type='text' required ng-model="story.namesList">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -260,7 +245,7 @@
         </div>
         <md-input-container>
           <label>Descripción</label>
-          <textarea required ng-model="story.decision-description" rows="4"></textarea>
+          <textarea required ng-model="story.decisionDescription" rows="4"></textarea>
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -291,7 +276,6 @@
         </span>
         <p>Firmas</p>
       </div>
-
       <div layout="column" layout-fill flex="100">
         <div layout="column" layout-align="start" class="input-header">
           <p>Por favor anexa una hoja escaneada con los nombres y firmas de los integrantes de la sociedad de padres, como aval de que la participación en este proyecto es aprobada por todos los padres de familia.</p>
@@ -307,9 +291,7 @@
         <md-button ng-if='!saved' class="md-raised md-primary" ng-click='save()'>Enviar registro</md-button>
       </div>
     </md-card>
-
   </div>
-
   <div layout-fill layout='column' layout-align='center center' flex ng-if='saving' style='height:100%'>
     <md-progress-linear md-mode="indeterminate"></md-progress-linear>
     <p>Guardando....</p>
