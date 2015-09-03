@@ -209,8 +209,9 @@ transition: height .2s;
 .inputs{padding:41px 0 0 0;}
 .inputs md-card{padding:40px 40px;}
 .inputs .circle{border-radius:50%; border:2px solid #F6921D; width:51px; height:51px; text-align:center; position:relative;}
-.inputs [class^="iconexito-"],.inputs [class*=" iconexito-"]{line-height:45px; font-size:31px; color:#F6921D}
-.inputs .input-header p{font-size:19px; margin-left:12px; color:#5BA1E6;}
+.inputs [class^="iconexito-"],.inputs [class*=" iconexito-"]{line-height:53px; font-size:31px; color:#F6921D}
+.inputs .input-header p{font-size:19px; margin-left:12px; color:#5BA1E6;font-weight: bold;}
+.inputs .input-header p.description{font-weight: normal;}
 #content .inputs input:focus, .inputs input, #content .inputs textarea:focus, .inputs textarea{border-color:#5BA1E6}
 .inputs .expand-header .iconexito-antecedentes{line-height:53px;}
 .inputs .expand-header .input-header p,
@@ -218,7 +219,7 @@ transition: height .2s;
 .inputs .expand-header .info{font-size:17px; margin-top:17px; line-height:normal; color:#5BA1E6;}
 .inputs .expand-header ul.info{list-style-type:disc; padding:0 22px;}
 .inputs .expand-header .input-header.signature p{color:#5BA1E6;}
-.inputs .expand-header .warning{color:#828282; font-size:14px; font-weight:700;}
+.inputs md-input-container .warning{color:#828282; font-size:14px; font-weight:700;}
 #content .inputs .send button{padding:0 53px; background:#5BA1E6;margin-bottom:12px}
 .send button span{font-size:14px; font-weight:700;}
 .send .iconexito-listo{font-size:66px; line-height:normal;}
