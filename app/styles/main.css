@@ -165,22 +165,36 @@ transition: height .2s;
 
 	ul.dropdown-menu{max-width: 240px}
 	#toggle-compara{display: none;}
-
 }
 
+.upper{text-transform: uppercase;}
 #camino img{width:100%; height:100%;}
-#camino .intro{background:#5BA1E6; max-height:555px;}
+#camino .intro{background:#276FB7;position: relative;}
 #camino .left, #camino .left a{color:white;}
-#camino .right{overflow:hidden;}
+#camino .right{overflow:hidden;min-height: 450px;}
+#camino .intro .child-pic{background-image: url(../images/nino.jpg);background-position: center top;background-size: cover;position: absolute;width: 100%;height: 100%;}
 #camino .register.info{background:#F6921A;}
 #camino .tmp{margin-top:240px;}
-#camino .left p{line-height:normal}
-#camino .left .question{font-size:18px; font-weight:700;}
-#camino .left .share{font-size:23px; font-weight:700;}
-#camino .left .cuenta{font-size:45px;}
-#camino .mbases{margin-top:44px;}
+#camino h1{font-size: 3em;font-weight: bold;margin-bottom: -10px;}
+#camino .sub{font-size: 1.5em;margin: 0;}
+#camino .sub span:first-of-type{font-size: 1.2em;}
+#camino .sub span:last-of-type{font-size: 1.3em;font-weight: bold;}
+#camino .quote{border-left: solid 4px #FF930D;width: 80%;padding-left: 10px;margin: 20px 0;position: relative;}
+#camino .quote .logo-educacion{background-color: white;border-radius: 50%;height: 200px;position: absolute;right: -28%;width: 200px;z-index: 10;}
+#camino .quote .logo-educacion .pic{background-image: url(../images/logo.png);background-position: center 40px; background-repeat: no-repeat;background-size: 80% auto;height: 100%;position: absolute;width: 100%;z-index: 5;}
+#camino .quote .logo-educacion .triangle{background-color: white;height: 50px;left: -10px;position: absolute;top: 75px;transform: rotate(45deg);width: 50px;}
+#camino .quote p{font-size: 1.2em;margin: 10px 0;width: 90%;}
+#camino .quote p:first-of-type{margin-top: 0}
+#camino .quote p:last-of-type{margin-bottom: 0}
+#camino .quote .custom1{font-size: 1.2em;font-weight: bold;}
+#camino .quote .custom2 span{font-weight: bold;}
+#camino .left p{line-height:normal;font-size: 1.2em;}
+#camino .left .question{font-size:1.2em; font-weight:200;}
+#camino .left .share{font-size:1.3em; font-weight:200;}
+#camino .left .cuenta{font-size:3em;}
+#camino .mbases{margin-top:0px;}
 #camino .bases p{font-size:18px;}
-#camino .bases .border-link{margin:16px; position:relative;border: 2px solid white; font-weight: 700; padding:2px 23px;}
+#camino .bases .border-link{margin:16px; position:relative;border: 2px solid white; font-weight: 700; padding:2px 23px;width: 300px;}
 #camino .bases .border-link span{font-size:25px;}
 #camino .bases .border-link p{font-size:15px; padding:10px 10px; font-weight:700;}
 #camino .bases .border-link .total-link{position:absolute; width:100%; height:100%; right:0; top:0;}
@@ -222,4 +236,5 @@ transition: height .2s;
 @media(max-width: 960px){
 	#content{padding: 0 12px}
 	#footer{padding: 10px 12px}
+  #camino .quote p{width: 100%;}
 }
