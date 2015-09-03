@@ -220,11 +220,11 @@ transition: height .2s;
 .inputs .expand-header .input-header.signature p{color:#5BA1E6;}
 .inputs .expand-header .warning{color:#828282; font-size:14px; font-weight:700;}
 #content .inputs .send button{padding:0 53px; background:#5BA1E6;margin-bottom:12px}
-.inputs .send button span{font-size:14px; font-weight:700;}
-.inputs .send .iconexito-listo{font-size:66px; line-height:normal;}
-.inputs .send p{color:#F6921D;}
-.inputs .send .success{font-size:18px; font-weight:700; line-height:normal; padding:6px 0 0}
-.inputs .send .success + p{font-size:17px;}
+.send button span{font-size:14px; font-weight:700;}
+.send .iconexito-listo{font-size:66px; line-height:normal;}
+.send p{color:#F6921D;}
+.send .success{font-size:18px; font-weight:700; line-height:normal; padding:6px 0 0}
+.send .success + p{font-size:17px;}
 .logos{padding:37px 0;}
 #content .inputs .circle.expand{width:62px; height:52px}
 .iconexito-integrantes{line-height:52px;}

@@ -1,4 +1,4 @@
-<div id="camino" layout="column" >
+<div id="camino" layout="column">
   <div layout="row" layout-fill layout-md="column">
     <div class="intro left" flex="60" flex-sm="100" flex-md="100">
       <div layout="column" layout-align="center center" layout-fill layout-padding>
@@ -6,7 +6,10 @@
         <p class="sub">Fundación Televisa, Contando las mejores historias</p>
         <p class="sub">Papás y mamás en <span>Educ</span><span>Acción</span></p>
         <div class="quote">
-          <div class="logo-educacion" hide show-gt-md><div class="pic"></div><div class="triangle"></div></div>
+          <div class="logo-educacion" hide show-gt-md>
+            <div class="pic"></div>
+            <div class="triangle"></div>
+          </div>
           <p class="custom1 upper">¿Eres madre o padre de familia y participas en la escuela de tus hijos para mejorar su aprendizaje?</p>
           <p>Entonces, esta convocatoria es para ti.</p>
           <p class="custom2  upper">Fundación Televisa, Primero Noticias y MejoraTuEscuela.org </br><span>te invitamos a que le cuentes a México tu historia de éxito.</span></p>
@@ -41,9 +44,9 @@
     </div>
   </div>
 </div>
-
 <div class="container inputs">
   <a id="registro"></a>
+
   <div ng-if='!saved &amp;&amp; !saving'>
    <md-card layout-padding layout-wrap layout='row'>
     <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
@@ -134,10 +137,8 @@
         <p>Antecedentes</p>
       </div>
       <p class="info">
-        <strong>Explicación de la problemática que se busca resolver</strong>
-        (¿Por qué es un problema actual? ¿Qué lo origina?)
-        <strong>y una breve justificación de por qué se considera importante por la comunidad educativa</strong>
-        (¿Por qué, si lo resolvemos, se va a reflejar en mejores condiciones para el aprendizaje de nuestros hijos?)
+        <strong>Explicación de la problemática que se busca resolver</strong> (¿Por qué es un problema actual? ¿Qué lo origina?)
+        <strong>y una breve justificación de por qué se considera importante por la comunidad educativa</strong> (¿Por qué, si lo resolvemos, se va a reflejar en mejores condiciones para el aprendizaje de nuestros hijos?)
       </p>
       <md-input-container>
         <label>Cuentanos tu historia</label>
@@ -158,7 +159,7 @@
       </ul>
       <md-input-container>
         <label>Nombres de los padres de familia</label>
-        <textarea required ng-model="story.parents" rows="4" ></textarea>
+        <textarea required ng-model="story.parents" rows="4"></textarea>
       </md-input-container>
     </div>
     <div layout="column" layout-fill flex="100" class="expand-header">
@@ -169,14 +170,12 @@
         <p>Organización</p>
       </div>
       <p class="info">
-        <strong>Breve descripción de cómo se tomarán las decisiones</strong>
-        (¿Cómo vamos a ponernos de acuerdo? ¿Qué haremos si surge un imprevisto? ¿Cómo vamos a verificar si avanzamos como lo planeamos?)
-        <strong>Y cómo interactuarán con los maestros y directivos de la escuela</strong>
-        (¿Cómo los vamos a informar? ¿Qué colaboración les vamos a pedir? ¿Cómo sabemos que están de acuerdo con lo que vamos haciendo y lo apoyan?).
+        <strong>Breve descripción de cómo se tomarán las decisiones</strong> (¿Cómo vamos a ponernos de acuerdo? ¿Qué haremos si surge un imprevisto? ¿Cómo vamos a verificar si avanzamos como lo planeamos?)
+        <strong>Y cómo interactuarán con los maestros y directivos de la escuela</strong> (¿Cómo los vamos a informar? ¿Qué colaboración les vamos a pedir? ¿Cómo sabemos que están de acuerdo con lo que vamos haciendo y lo apoyan?).
       </p>
       <md-input-container>
         <label>Organización</label>
-        <textarea required ng-model="story.org" rows="4" ></textarea>
+        <textarea required ng-model="story.org" rows="4"></textarea>
       </md-input-container>
     </div>
     <div layout="column" layout-fill flex="100" class="expand-header">
@@ -191,29 +190,27 @@
       </p>
       <md-input-container>
         <p class="warning">Sube el archivo desde tu computadora. El maximo es de 10MB</p>
-        <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" ></div>
+        <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*"></div>
         <p>{{file.name}}</p>
         <p>tamaño:{{file.size | fileSize}}</p>
       </md-input-container>
     </div>
     <div layout-align="center center" layout="column" flex="100" class="send">
       <md-button ng-if='!saved' class="md-raised md-primary" ng-click='save()'>Enviar registro</md-button>
-      <span ng-if='saved' class="iconexito-listo"></span>
-      <p ng-if='saved' class="success">¡Listo!</p>
-      <p ng-if='saved'>Tu registro ya se envió</p>
     </div>
   </md-card>
   <div layout-fill layout='column' layout-align='center center' flex ng-if='saving' style='height:100%'>
     <md-progress-linear md-mode="indeterminate"></md-progress-linear>
     <p>Guardando....</p>
   </div>
-  <!--
-  <md-card layout-padding ng-if='saved' layout-fill flex>
-    <h3>Gracias por tu entrada</h3>
+  <md-card layout-padding ng-if='saved' class='send' layout-align='center center'>
+    <span class="iconexito-listo"></span>
+    <p class="success">¡Listo!</p>
+    <p>Tu registro ya se envió</p>
   </md-card>
-  -->
   <div layout="row" layout-fill layout-align="space-around center" class="logos">
     <img src="images/fundacion.png">
-    <img src="images/imco.png">
+    <img src="images/1noticias.png">
+    <img src="images/logo_mejora.png">
   </div>
 </div>
