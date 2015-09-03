@@ -71,7 +71,14 @@
             ng-model='story.school'
             >
           <md-item-template>
-            <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>
+            <!-- <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>-->
+            <a tabindex="-1" class="autocomple_item">
+              <i class="icon-escuela-01"></i>
+              <strong>
+                <span>{{item.nombre}}</span> (<span >{{item.nom_nivel || item.nivel}}</span>)
+              </strong>
+              <p><span class="small">{{item.direccion}}</span></p>
+            </a>
           </md-item-template>
         </md-autocomplete>
       </div>
