@@ -68,6 +68,11 @@ angular.module('caminoAlExitoApp')
     };
 
     $scope.save = function() {
+      if(!$scope.story.signatures){
+        alertNoFile();
+        return;
+      }
+
       $scope.saving = true;
       firebaseEntries.push().set($scope.story, function(e) {
         $scope.saving = false;
@@ -80,5 +85,16 @@ angular.module('caminoAlExitoApp')
       $location.hash('registro');
       $anchorScroll();
     };
+
+    var alertNoFile = function(){
+      $mdDialog.show(
+        $mdDialog.alert()
+        .clickOutsideToClose(true)
+        .title('No ingresaste firmas')
+        .content('Las firmas son necesarias')
+        .ok('Ok')
+      );
+
+    }
 
   });

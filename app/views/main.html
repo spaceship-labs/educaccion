@@ -46,7 +46,7 @@
 </div>
 <div class="container inputs">
   <a id="registro"></a>
-  <div ng-if='!saved &amp;&amp; !saving &amp;&amp; showForm'>
+  <form ng-if='!saved &amp;&amp; !saving &amp;&amp; showForm' ng-submit="save()"
     <md-card layout-padding layout-wrap layout='row'>
       <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
         <span class="circle">
@@ -282,16 +282,17 @@
         </div>
         <md-input-container>
           <p class="warning">Sube el archivo desde tu computadora. El maximo es de 10MB</p>
-          <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*"></div>
+          <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" required></div>
           <p>{{file.name}}</p>
-          <p>tamaño:{{file.size | fileSize}}</p>
+          <p ng-if="file">tamaño:{{file.size | fileSize}}</p>
         </md-input-container>
       </div>
       <div layout-align="center center" layout="column" flex="100" class="send">
-        <md-button ng-if='!saved' class="md-raised md-primary" ng-click='save()'>Enviar registro</md-button>
+        <md-button ng-if='!saved' class="md-raised md-primary" type="submit">Enviar registro</md-button>
       </div>
     </md-card>
-  </div>
+  </form>
+  <!-- end form -->
   <div layout-fill layout='column' layout-align='center center' flex ng-if='saving' style='height:100%'>
     <md-progress-linear md-mode="indeterminate"></md-progress-linear>
     <p>Guardando....</p>
