@@ -67,6 +67,16 @@ angular.module('caminoAlExitoApp')
       });
     };
 
+    var alertNoFile = function(){
+      $mdDialog.show(
+        $mdDialog.alert()
+        .clickOutsideToClose(true)
+        .title('No ingresaste firmas')
+        .content('Las firmas son necesarias')
+        .ok('Ok')
+      );
+    };
+
     $scope.save = function() {
       if(!$scope.story.signatures){
         alertNoFile();
@@ -86,14 +96,6 @@ angular.module('caminoAlExitoApp')
       $anchorScroll();
     };
 
-    var alertNoFile = function(){
-      $mdDialog.show(
-        $mdDialog.alert()
-        .clickOutsideToClose(true)
-        .title('No ingresaste firmas')
-        .content('Las firmas son necesarias')
-        .ok('Ok')
-      );
-    };
+
 
   });
