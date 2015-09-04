@@ -94,7 +94,6 @@ angular.module('caminoAlExitoApp')
         .content('Las firmas son necesarias')
         .ok('Ok')
       );
-
-    }
+    };
 
   });
