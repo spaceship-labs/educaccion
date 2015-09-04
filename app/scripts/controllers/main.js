@@ -18,7 +18,7 @@ angular.module('caminoAlExitoApp')
     });
 */
     $scope.story = {};
-
+    $scope.showForm = false;
     $scope.saved = false;
     $scope.saving = false;
     $scope.readMethod = "readAsDataURL";

@@ -40,13 +40,13 @@
       <h1>Registra tu historia</h1>
       <p>Fecha limite de parte 1:</p>
       <p><strong>31 de Diciembre del 2015</strong></p>
-      <a class="down" ng-click="toDown()"></a>
+      <a class="down" ng-click="showForm = !showForm"></a>
     </div>
   </div>
 </div>
 <div class="container inputs">
   <a id="registro"></a>
-  <div ng-if='!saved &amp;&amp; !saving'>
+  <div ng-if='!saved &amp;&amp; !saving &amp;&amp; showForm'>
     <md-card layout-padding layout-wrap layout='row'>
       <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
         <span class="circle">
