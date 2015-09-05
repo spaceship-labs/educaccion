@@ -168,7 +168,7 @@ transition: height .2s;
 }
 
 .upper{text-transform: uppercase;}
-#camino img{width:100%; height:100%;}
+#camino img{ height:100%;}
 #camino .intro{background:#276FB7;position: relative;}
 #camino .left, #camino .left a{color:white;}
 #camino .right{overflow:hidden;min-height: 450px;}
@@ -227,6 +227,8 @@ transition: height .2s;
 .send .success{font-size:18px; font-weight:700; line-height:normal; padding:6px 0 0}
 .send .success + p{font-size:17px;}
 .logos{padding:37px 0;}
+.intro .logos{background-color:#F9F8F6;padding:12px;}
+.highlight{color:#F5921A;font-size:1.6em!important;}
 #content .inputs .circle.expand{width:62px; height:52px}
 .iconexito-integrantes{line-height:52px;}
 
