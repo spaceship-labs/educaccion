@@ -90,7 +90,7 @@
         </div>
         <md-input-container>
           <label>Nombre</label>
-          <input type='text' required ng-model="story.representativeNames">
+          <input type='text'  ng-model="story.representativeNames">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="50">
@@ -99,7 +99,7 @@
         </div>
         <md-input-container>
           <label>Escribe tu mail</label>
-          <input type='email' required ng-model="story.email">
+          <input type='email'  ng-model="story.email" required>
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="50">
@@ -108,7 +108,7 @@
         </div>
         <md-input-container flex='50'>
           <label>Teléfono</label>
-          <input required ng-model="story.phone">
+          <input  ng-model="story.phone">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -117,7 +117,7 @@
         </div>
         <md-input-container>
           <label>Nombre</label>
-          <input type='text' required ng-model="story.associationNames">
+          <input type='text'  ng-model="story.associationNames">
         </md-input-container>
       </div>
     </md-card>
@@ -135,7 +135,7 @@
         </div>
         <md-input-container>
           <label>Características de la escuela</label>
-          <textarea required ng-model="story.schoolFeatures" rows="4"></textarea>
+          <textarea  ng-model="story.schoolFeatures" rows="4"></textarea>
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -145,7 +145,7 @@
         </div>
         <md-input-container>
           <label>Número de alumnos</label>
-          <input type='text' required ng-model="story.studentsNumber">
+          <input type='text'  ng-model="story.studentsNumber">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -155,7 +155,7 @@
         </div>
         <md-input-container>
           <label>Descripción</label>
-          <textarea required ng-model="story.environmentDescription" rows="4"></textarea>
+          <textarea  ng-model="story.environmentDescription" rows="4"></textarea>
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -165,7 +165,7 @@
         </div>
         <md-input-container>
           <label>Principales problemas</label>
-          <textarea required ng-model="story.schoolProblems" rows="4"></textarea>
+          <textarea  ng-model="story.schoolProblems" rows="4"></textarea>
         </md-input-container>
       </div>
     </md-card>
@@ -183,7 +183,7 @@
         </div>
         <md-input-container>
           <label>Problemática</label>
-          <textarea required ng-model="story.problematic" rows="4"></textarea>
+          <textarea  ng-model="story.problematic" rows="4"></textarea>
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -193,7 +193,7 @@
         </div>
         <md-input-container>
           <label>Justificación</label>
-          <textarea required ng-model="story.justification" rows="4"></textarea>
+          <textarea  ng-model="story.justification" rows="4"></textarea>
         </md-input-container>
       </div>
     </md-card>
@@ -211,7 +211,7 @@
         </div>
         <md-input-container>
           <label>Descripción</label>
-          <textarea required ng-model="story.activityDescription" rows="4"></textarea>
+          <textarea  ng-model="story.activityDescription" rows="4"></textarea>
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -221,7 +221,7 @@
         </div>
         <md-input-container>
           <label>Nombres</label>
-          <input type='text' required ng-model="story.namesList">
+          <input type='text'  ng-model="story.namesList">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -231,7 +231,7 @@
         </div>
         <md-input-container>
           <label>Fecha estimada</label>
-          <input type='text' required ng-model="story.date">
+          <input type='text'  ng-model="story.date">
         </md-input-container>
       </div>
     </md-card>
@@ -249,7 +249,7 @@
         </div>
         <md-input-container>
           <label>Descripción</label>
-          <textarea required ng-model="story.decisionDescription" rows="4"></textarea>
+          <textarea  ng-model="story.decisionDescription" rows="4"></textarea>
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -259,7 +259,7 @@
         </div>
         <md-input-container>
           <label>Descripción</label>
-          <input type='text' required ng-model="story.evaluation">
+          <input type='text'  ng-model="story.evaluation">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="100">
@@ -269,7 +269,7 @@
         </div>
         <md-input-container>
           <label>Descripción</label>
-          <textarea required ng-model="story.interaction" rows="4"></textarea>
+          <textarea  ng-model="story.interaction" rows="4"></textarea>
         </md-input-container>
       </div>
     </md-card>
@@ -286,7 +286,7 @@
         </div>
         <md-input-container>
           <p class="warning">Sube el archivo desde tu computadora. El maximo es de 10MB</p>
-          <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" required></div>
+          <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" ></div>
           <p>{{file.name}}</p>
           <p ng-if="file">tamaño:{{file.size | fileSize}}</p>
         </md-input-container>
