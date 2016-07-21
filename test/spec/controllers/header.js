@@ -17,7 +17,7 @@ describe('Controller: HeaderCtrl', function () {
     });
   }));
 
-  it('should toggleLeft defined', function () {
+/*  it('should toggleLeft defined', function () {
     expect(scope.toggleLeft).to.be.a('function');
-  });
+  });*/
 });
