@@ -1,314 +1,63 @@
 <div id="camino" layout="column">
   <div layout="row" layout-fill layout-md="column">
-    <div class="intro left" flex="60" flex-sm="100" flex-md="100">
+    <div class="intro left" flex="40" flex-sm="100" flex-md="100">
       <div layout="column" layout-align="center center" layout-fill layout-padding>
-        <h1 class="upper">CONVOCATORIA</h1>
-        <p class="sub">Fundación Televisa y Primero Noticias, Contando las mejores historias</p>
-        <p class="sub">Papás y mamás en <span class='highlight'> <span>Educ</span><span>Acción</span></span></p>
-        <div class="quote">
-          <div class="logo-educacion" hide show-gt-md>
-            <div class="pic"></div>
-            <div class="triangle"></div>
-          </div>
-          <p class="custom1 upper">¿Eres madre o padre de familia y participas en la escuela de tus hijos para mejorar su aprendizaje?</p>
-          <p>Entonces, esta convocatoria es para ti.</p>
-          <p class="custom2  upper">Fundación Televisa, Primero Noticias y MejoraTuEscuela.org </br><span>te invitamos a que le cuentes a México tu historia de éxito.</span></p>
-          <p>El objetivo de esta convocatoria es alentar a las sociedades de padres de familia a participar activamente en el desarrollo y el aprendizaje de sus hijos e hijas de la mano de sus maestros y directores. Buscamos historias en las que se construyan propuestas creativas, innovadoras y viables para solucionar necesidades educativas reales. </p>
-        </div>
-        <p class="question upper">¿Tienes una historia de éxito?</p>
-        <p class="cuenta upper">¡Cuéntanosla!</p>
-        <p class="share upper">¡La queremos compartir!</p>
-        <div class="mbases" hide-md></div>
-        <div class="bases" layout="column" layout-align="space-around center">
-          <div layout="row" class="border-link" layout-align="center center">
-            <span class="iconexito-pdf">
-            </span>
-            <p class="upper">Leer las bases</p>
-            <a class="total-link" target='_blank' href="/BasesConvocatoria_PapasYMamasEnEducAccion.pdf"></a>
-          </div>
+        <div class="logo-educacion">
         </div>
       </div>
     </div>
     <div class="intro right" flex hide-sm layout='column'>
+      <div flex>
+        <div class='ribbon'></div>
+        <h1>Conoce las historias  de</h1>
+        <h2>las escuelas ganadoras</h2>
+        <h3>de la convocatoria</h3>
+        <h3>papás y mamás en educacción</h3>
+      </div>
       <div class='logos' layout-align="space-around center" layout='row'>
         <img src="images/fundacion_sm.png">
         <img src="images/primero_sm.png">
         <img src="images/mejora_sm.png">
       </div>
-      <div class="child-pic"></div>
-    </div>
-  </div>
-  <div class="register info">
-    <div layout="column" layout-align="center center">
-      <span class="iconexito-registro"></span>
-      <h1>Registra tu historia</h1>
-      <p>Fecha limite de parte 1:</p>
-      <p><strong>31 de Diciembre del 2015</strong></p>
-      <a class="down" ng-click="showForm = !showForm"></a>
     </div>
   </div>
 </div>
-<div class="container inputs">
-  <a id="registro"></a>
-  <form ng-if='!saved &amp;&amp; !saving &amp;&amp; showForm' ng-submit="save()">
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Datos de tu escuela</p>
-      </div>
-      <div layout="column" layout-fill flex="50" layout-wrap>
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Nombre de tu escuela</p>
-        </div>
-        <md-autocomplete required md-input-name="autocompleteField" md-input-minlength="2" md-search-text="searchText" md-items="item in getSchools(searchText)" md-selected-item='selectedSchool' md-selected-item-change='selectSchool(selectedSchool)' md-item-text="item.nombre+', '+item.nom_municipio" md-floating-label="Nombre de la escuela" ng-model='story.school'>
-          <md-item-template>
-            <!-- <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>-->
-            <a tabindex="-1" class="autocomple_item">
-              <i class="icon-escuela-01"></i>
-              <strong>
-                <span>{{item.nombre}}</span> (<span >{{item.nom_nivel || item.nivel}}</span>)
-                <span>{{item.direccion}}</span>
-              </strong>
-            </a>
-          </md-item-template>
-        </md-autocomplete>
-      </div>
-      <div layout="column" layout-fill flex="50">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Clave de Centro de Trabajo (CCT)</p>
-        </div>
-        <md-input-container>
-          <label>CCT</label>
-          <input required ng-model="story.cct">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Nombre de quien propone el proyecto</p>
-        </div>
-        <md-input-container>
-          <label>Nombre</label>
-          <input type='text'  ng-model="story.representativeNames">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="50">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Correo electrónico de contacto</p>
-        </div>
-        <md-input-container>
-          <label>Escribe tu mail</label>
-          <input type='email'  ng-model="story.email" required>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="50">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Teléfono de contacto</p>
-        </div>
-        <md-input-container flex='50'>
-          <label>Teléfono</label>
-          <input  ng-model="story.phone">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Nombre de los integrantes de Asociación de Padres de Familia o Consejo de Participación Social (o de ambos).</p>
-        </div>
-        <md-input-container>
-          <label>Nombre</label>
-          <input type='text'  ng-model="story.associationNames">
-        </md-input-container>
-      </div>
-    </md-card>
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Beneficiarios de la escuela</p>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Características de la escuela</p>
-          <p class="description">Antigüedad, estado de la infraestructura y servicios a los que tiene –o no- acceso: drenaje, baños, agua potable, electricidad, conectividad.</p>
-        </div>
-        <md-input-container>
-          <label>Características de la escuela</label>
-          <textarea  ng-model="story.schoolFeatures" rows="4"></textarea>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Número de alumnos en la matrícula</p>
-          <p class="description">¿Cuántos hombres? ¿Cuántas mujeres?</p>
-        </div>
-        <md-input-container>
-          <label>Número de alumnos</label>
-          <input type='text'  ng-model="story.studentsNumber">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Descripción del entorno familiar y social de la población beneficiada</p>
-          <p class="description">Por ejemplo: si es zona de alta marginación; características de seguridad y prosperidad de la localidad; tipo de composición de los hogares de los alumnos (familia ampliada, jefa o jefe de familia solo, hacinamiento, etc).</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <textarea  ng-model="story.environmentDescription" rows="4"></textarea>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Principales problemas en el entorno de la escuela</p>
-          <p class="description">¿La Escuela ha recibido recursos por parte del gobierno federal o estatal para atender estas problemáticas? </p>
-        </div>
-        <md-input-container>
-          <label>Principales problemas</label>
-          <textarea  ng-model="story.schoolProblems" rows="4"></textarea>
-        </md-input-container>
-      </div>
-    </md-card>
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Antecedentes</p>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Problemática que se busca resolver</p>
-          <p class="description">¿Por qué es un problema actual? ¿Qué lo origina?</p>
-        </div>
-        <md-input-container>
-          <label>Problemática</label>
-          <textarea  ng-model="story.problematic" rows="4"></textarea>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Breve justificación de por qué se considera importante por la comunidad educativa </p>
-          <p class="description">Por qué, si lo resolvemos, se va a reflejar en mejores condiciones para el aprendizaje de nuestros hijos?</p>
-        </div>
-        <md-input-container>
-          <label>Justificación</label>
-          <textarea  ng-model="story.justification" rows="4"></textarea>
-        </md-input-container>
-      </div>
-    </md-card>
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Objetivos del proyecto</p>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Descripción de las actividades que se planean realizar </p>
-          <p class="description">¿Qué vamos a hacer?</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <textarea  ng-model="story.activityDescription" rows="4"></textarea>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Lista de quiénes estarían involucrados</p>
-          <p class="description">¿Quiénes participarán en lo que vamos a hacer?</p>
-        </div>
-        <md-input-container>
-          <label>Nombres</label>
-          <input type='text'  ng-model="story.namesList">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Fechas estimadas para la realización del proyecto</p>
-          <p class="description">¿Con qué etapas y en qué fechas vamos a realizar el proyecto de mejora?</p>
-        </div>
-        <md-input-container>
-          <label>Fecha estimada</label>
-          <input type='text'  ng-model="story.date">
-        </md-input-container>
-      </div>
-    </md-card>
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Organización</p>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Breve descripción de cómo se tomarán las decisiones</p>
-          <p class="description">¿Cómo vamos a ponernos de acuerdo? ¿Qué haremos si surge un imprevisto?</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <textarea  ng-model="story.decisionDescription" rows="4"></textarea>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Evaluación de avance</p>
-          <p class="description">¿Cómo vamos a verificar si avanzamos como lo planeamos?</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <input type='text'  ng-model="story.evaluation">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>¿Cómo interactuarán con los maestros y directivos de la escuela?</p>
-          <p class="description">¿Cómo los vamos a informar? ¿Qué colaboración les vamos a pedir? ¿Cómo sabemos que están de acuerdo con lo que vamos haciendo y lo apoyan?</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <textarea  ng-model="story.interaction" rows="4"></textarea>
-        </md-input-container>
-      </div>
-    </md-card>
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Firmas</p>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Por favor anexa una hoja escaneada con los nombres y firmas de los integrantes de la sociedad de padres, como aval de que la participación en este proyecto es aprobada por todos los padres de familia.</p>
-        </div>
-        <md-input-container>
-          <p class="warning">Sube el archivo desde tu computadora. El maximo es de 10MB</p>
-          <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" ></div>
-          <p>{{file.name}}</p>
-          <p ng-if="file">tamaño:{{file.size | fileSize}}</p>
-        </md-input-container>
-      </div>
-      <div layout-align="center center" layout="column" flex="100" class="send">
-        <md-button ng-if='!saved' class="md-raised md-primary" type="submit">Enviar registro</md-button>
-      </div>
-    </md-card>
-  </form>
-  <!-- end form -->
-  <div layout-fill layout='column' layout-align='center center' flex ng-if='saving' style='height:100%'>
-    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
-    <p>Guardando....</p>
+<div id="main-content">
+  <h1>Felicidades</h1>
+  <h2>a todas las escuelas participantes</h2>
+  <div class="clapping"></div>
+  <p class='blue'><strong>Fueron tantas las historias inspiradoras</strong></p>
+  <p class="blue">que decidimos premiar el esfuerzo y dedicación</p>
+  <p class="blue">del doble de escuelas</p>
+  <h3>Haz clic y conoce las 10 ganadoras</h3>
+  <div class="arrow"></div>
+  <div class="schools" layout='column' layout-sm="column" layout-align="center" flex="70">
+    <p layout='row' layout-sm='column' flex-sm="100">
+      <a href="images/fichas/1.docx" flex>Centro de Educación Indígena Lázaro Cárdenas <i>Zongozotla, Puebla</i></a>
+      <a href="images/fichas/2.docx" flex>Escuela Primaria General Lázaro Cárdenas <i>Dolores Hidalgo, Guanajuato</i></a>
+    </p>
+    <p layout='row' layout-sm='column' flex-sm="100">
+      <a href="images/fichas/3.docx" flex>Escuela Primaria Amado Nervo <i>Atizapán de Zaragoza, Estado de México</i></a>
+      <a href="images/fichas/4.docx" flex>Preescolar Indígena Xochiquetzali <i>San José Chiquito, Santiago Miahuatlán, Puebla</i></a>
+    </p>
+    <p layout='row' layout-sm='column' flex-sm="100">
+      <a href="images/fichas/5.docx" flex>Secundaria Técnica 46 Gral. Felipe Ángeles<i>Tijuana, Baja California</i></a>
+      <a href="images/fichas/6.docx" flex>Escuela Primaria Amalia S. de Cárdenas <i>Cuautitlán Izcalli, Estado de México</i></a>
+    </p>
+    <p layout='row' layout-sm='column' flex-sm="100">
+      <a href="images/fichas/7.docx" flex>Escuela Preparatoria a Distancia 55 <i>Centla, Tabasco</i></a>
+      <a href="images/fichas/8.docx" flex>Escuela Primaria Álvaro Obregón <i>Fresnillo, Zacatecas</i></a>
+    </p>
+    <p layout='row' layout-sm='column' flex-sm="100">
+      <a href="images/fichas/9.docx" flex>Escuela Primaria Independencia <i> Mexicali, Baja California</i></a>
+      <a href="images/fichas/10.docx" flex>Telesecundaria Miguel Hidalgo <i>San Luis Potosí, SLP</i></a>
+    </p>
+
   </div>
-  <md-card layout-padding ng-if='saved' class='send' layout-align='center center'>
-    <span class="iconexito-listo"></span>
-    <p class="success">¡Listo!</p>
-    <p>Tu registro ya se envió</p>
-  </md-card>
-  <div layout="row" layout-fill layout-align="space-around center" class="logos">
-    <img src="images/fundacion.png">
-    <img src="images/1noticias.png">
-    <img src="images/logo_mejora.png">
+  <div class="premiacion">
+    <h1>La premiación se llevará en 2 etapas:</h1>
+    <h2><strong>1er etapa:</strong> antes del 1 de agosto</h2>
+    <h2><strong>2da etapa:</strong> a partir del próximo ciclo escolar</h2>
+
   </div>
 </div>

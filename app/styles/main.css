@@ -95,11 +95,7 @@ strong{font-weight:700;}
 #header .menu .container{height: 100%;position:relative;}
 #header .menu .container .row-links{height: 100%}
 #header .menu a.principal{display:block;text-align:center;color:#17B9F3;font-size:16px;height: 100%;padding:15px 6px;line-height:17px;font-size:17px;position:relative;z-index: 1;
-	-webkit-transition: color .2s;
-	-moz-transition: color .2s;
-	-o-transition: color .2s;
-	-ms-transition: color .2s;
-	transition: color .2s;
+  transition: color .2s;
 }
 #header .menu a.principal:before{content:"";position:absolute;width:1px;display:block;height:100%;background:#F2F2F2;top:0;left:0;}
 #header .menu a.principal:first-child{border:none;}
@@ -109,10 +105,6 @@ strong{font-weight:700;}
 #header .menu a + a + a{margin-left:1px;}
 #header .menu a.principal:hover{color:white;}/*background-color:#00ADF3;*/
 #header .menu a.principal:after{content:'';width:100%;position:absolute;top:0;left:0;height:0;background:#00ADF3;z-index:-1;
--webkit-transition: height .2s;
--moz-transition: height .2s;
--o-transition: height .2s;
--ms-transition: height .2s;
 transition: height .2s;
 }
 #header .menu a.principal:hover:after{height:100%}
@@ -134,77 +126,77 @@ transition: height .2s;
 #sidebar-menu #close-button{color: #fff;margin-left: 10px; background:#08863D;}
 
 @media (max-width: 600px){
-	/*General*/
-	[flex-sm="100"]{max-width: none!important;-webkit-flex: 1!important; -ms-flex: 1!important; flex: 1!important;}
+  /*General*/
+  [flex-sm="100"]{max-width: none!important; flex: 1!important;}
 
-	/*Header*/
-	#header .menu #button-menu-mobile{display: block;}
-	#header a[hide-sm]{display: none!important;}
-	#header #sub-header{text-align: center;}
-	#header #sub-header .column-left{display: none;}
-	#header #sub-header .column-right{padding: 10px}
-	#header #sub-header .column-right .titles h1{padding: 4px;margin-top: 0}
-	#simple_search input[type="text"],
-	#simple_search .button-bordered{margin: 0 auto 10px;max-width: 240px;width: 240px}
-	#header .menu a.logo{margin: 0 auto!important;max-width: 50%!important;text-align: center;}
-	#header .menu a.logo img{max-width: 100%;margin-top: 10px}
+  /*Header*/
+  #header .menu #button-menu-mobile{display: block;}
+  #header a[hide-sm]{display: none!important;}
+  #header #sub-header{text-align: center;}
+  #header #sub-header .column-left{display: none;}
+  #header #sub-header .column-right{padding: 10px}
+  #header #sub-header .column-right .titles h1{padding: 4px;margin-top: 0}
+  #simple_search input[type="text"],
+  #simple_search .button-bordered{margin: 0 auto 10px;max-width: 240px;width: 240px}
+  #header .menu a.logo{margin: 0 auto!important;max-width: 50%!important;text-align: center;}
+  #header .menu a.logo img{max-width: 100%;margin-top: 10px}
 
-	/*Breadcrumb*/
-	#content .container .breadcrumb a + a:before{content: '> ';border: 0}
-	#content .container .breadcrumb a.start{color: #05A6EE;background: none}
-	#content .container .breadcrumb a.start:after{display: none;}
-	#content .container .breadcrumb a{border: 0}
-	#content .container .breadcrumb a + a:before{left: 0}
-	#content .container .breadcrumb :nth-child(2){/*padding-left: 0;*/border-left: none}
-
-
-	/*Blog*/
-	#content .container.blog .feed .post .post-thumb{height: 200px;}
-	#content .container.blog .feed .post .post-thumb .img{padding: 18%;}
+  /*Breadcrumb*/
+  #content .container .breadcrumb a + a:before{content: '> ';border: 0}
+  #content .container .breadcrumb a.start{color: #05A6EE;background: none}
+  #content .container .breadcrumb a.start:after{display: none;}
+  #content .container .breadcrumb a{border: 0}
+  #content .container .breadcrumb a + a:before{left: 0}
+  #content .container .breadcrumb :nth-child(2){/*padding-left: 0;*/border-left: none}
 
 
-	ul.dropdown-menu{max-width: 240px}
-	#toggle-compara{display: none;}
+  /*Blog*/
+  #content .container.blog .feed .post .post-thumb{height: 200px;}
+  #content .container.blog .feed .post .post-thumb .img{padding: 18%;}
+
+
+  ul.dropdown-menu{max-width: 240px}
+  #toggle-compara{display: none;}
 }
 
 .upper{text-transform: uppercase;}
-#camino img{ height:100%;}
-#camino .intro{background:#276FB7;position: relative;}
+#camino h1{text-align:center;font-size:35px; line-height:normal; color:white;text-transform: uppercase;}
+#camino h2{text-align:center;font-size:35px; line-height:normal; color:white;text-transform: uppercase;font-weight: bold}
+#camino h3{text-align:center;font-size:20px; line-height:30px; color:white;text-transform: uppercase;}
+#camino .ribbon{margin:20px auto;background:url(../images/ganadoras.png) no-repeat;width:76px;height:113px;}
+#camino .intro{background:#F6921A;position: relative;}
 #camino .left, #camino .left a{color:white;}
-#camino .right{overflow:hidden;min-height: 450px;}
-#camino .intro .child-pic{background-image: url(../images/nino.jpg);background-position: center top;background-size: cover;position: absolute;width: 100%;height: 100%;}
+#camino .right{overflow:hidden;min-height: 450px;background: #256EBD;padding-top: 20px}
 #camino .register.info{background:#F6921A;}
 #camino .tmp{margin-top:240px;}
-#camino h1{font-size: 3em;font-weight: bold;margin-bottom: -10px;}
 #camino .sub{font-size: 1.5em;margin: 0;}
 #camino .sub span:first-of-type{font-size: 1.2em;}
 #camino .sub span:last-of-type{font-size: 1.3em;font-weight: bold;}
-#camino .quote{border-left: solid 4px #FF930D;width: 80%;padding-left: 10px;margin: 20px 0;position: relative;}
-#camino .quote .logo-educacion{background-color: white;border-radius: 50%;height: 200px;position: absolute;right: -28%;width: 200px;z-index: 10;}
-#camino .quote .logo-educacion .pic{background-image: url(../images/logo.png);background-position: center 40px; background-repeat: no-repeat;background-size: 80% auto;height: 100%;position: absolute;width: 100%;z-index: 5;}
-#camino .quote .logo-educacion .triangle{background-color: white;height: 50px;left: -10px;position: absolute;top: 75px;transform: rotate(45deg);width: 50px;}
-#camino .quote p{font-size: 1.2em;margin: 10px 0;width: 90%;}
-#camino .quote p:first-of-type{margin-top: 0}
-#camino .quote p:last-of-type{margin-bottom: 0}
-#camino .quote .custom1{font-size: 1.2em;font-weight: bold;}
-#camino .quote .custom2 span{font-weight: bold;}
+#camino .logo-educacion{background-color: white;border-radius: 50%;height: 208px;width: 208px;z-index: 10;background-image: url(../images/logo.png);}
+#camino .logo-educacion .triangle{background-color: white;height: 50px;left: -10px;position: absolute;top: 75px;transform: rotate(45deg);width: 50px;}
+
 #camino .left p{line-height:normal;font-size: 1.2em;}
 #camino .left .question{font-size:1.2em; font-weight:200;}
 #camino .left .share{font-size:1.3em; font-weight:200;}
 #camino .left .cuenta{font-size:3em;}
-#camino .mbases{margin-top:0px;}
-#camino .bases p{font-size:18px;}
-#camino .bases .border-link{margin:16px; position:relative;border: 2px solid white; font-weight: 700; padding:2px 23px;width: 300px;}
-#camino .bases .border-link span{font-size:25px;}
-#camino .bases .border-link p{font-size:15px; padding:10px 10px; font-weight:700;}
-#camino .bases .border-link .total-link{position:absolute; width:100%; height:100%; right:0; top:0;}
-#camino .info .iconexito-registro{font-size:60px; color:white; padding:30px 0 0;}
-#camino .info h1{font-size:25px; line-height:normal; font-weight:700; color:white;}
-#camino .info p{font-size:16px; padding:13px 0 0; color:white;}
-#camino .info p + p{padding:0; margin-top:-5px; font-size:16px; font-weight: 700; color:white;}
-#camino .down{background:url(../images/flecha.png) center no-repeat; display:block; width:32px; height:43px; margin-bottom:15px;background-size:43px 21px; cursor:pointer;}
 
-#content{background:#F4F4F4;}
+#main-content {padding:40px 0;text-align:center;}
+#main-content h1{color:#F79301;text-align:center;font-size:35px;font-weight:bold;line-height: normal}
+#main-content h2{color:#F79301;text-align:center;font-size:35px;line-height: normal;}
+#main-content h3{color:#30C55F;text-align:center;font-size:25px;line-height: 55px;font-weight: bold}
+#main-content .clapping{background: url(../images/aplausos.png);width:115px;height:115px;margin:30px auto;}
+#main-content p.blue{color:#246DBA;font-size:18px;}
+
+#main-content .schools{}
+#main-content .schools a{display:block;border:3px solid #2FC45C;color:#575757;font-weight: bold;padding:20px;margin:20px;font-size:14px;}
+#main-content .schools a:hover{color:white;background-color:#2FC45C;}
+#main-content .schools a i{display:block;font-weight:normal;font-style: italic;}
+
+#main-content .premiacion{padding:10px 30px 30px 145px;min-height: 120px;background:url(../images/trofeo.png) no-repeat 10px 10px;margin:0 0 0 120px;}
+#main-content .premiacion h1{text-align:left;font-size:28px;}
+#main-content .premiacion h2{text-align:left;font-size:24px;}
+
+#main-content .arrow{width:59px;height:28px;background: url(../images/flecha.png) no-repeat;margin:20px auto;}
 
 .inputs{padding:41px 0 0 0;}
 .inputs md-card{padding:40px 40px;}
@@ -227,7 +219,7 @@ transition: height .2s;
 .send .success{font-size:18px; font-weight:700; line-height:normal; padding:6px 0 0}
 .send .success + p{font-size:17px;}
 .logos{padding:37px 0;}
-.intro .logos{background-color:#F9F8F6;padding:12px;}
+.intro .logos{background-color:#D5EAFF;padding:12px;}
 .highlight{color:#F5921A;font-size:1.6em!important;}
 #content .inputs .circle.expand{width:62px; height:52px}
 .iconexito-integrantes{line-height:52px;}
@@ -240,8 +232,8 @@ transition: height .2s;
 #footer.bottom-e404 .container.e404 .link a{color: #fff}
 #footer.bottom-e404 .container.e404 .link i{font-size: 28px}
 @media(max-width: 960px){
-	#content{padding: 0 12px}
-	#footer{padding: 10px 12px}
+  #content{padding: 0 12px}
+  #footer{padding: 10px 12px}
   #camino .quote p{width: 100%;}
 }
 
